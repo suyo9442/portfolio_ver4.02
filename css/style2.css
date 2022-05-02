@@ -1,0 +1,673 @@
+@charset "utf-8";
+:root {
+    /* Breakpoint */
+    --laptop: 1024px;
+    --tablet: 768px;
+    --phone: 375px;
+
+    /* color */
+    --bg-color: #EBEAE6;
+    --bl-color: #282B26;
+    --sb-color1: #1E3E87;
+    --sb-color2: #FE721C;
+
+    /* 모바일 100vh 리사이징 */
+    --vh: 100%;
+}
+
+/* 루트 폰트 사이즈 */
+html {font-size: 62.5%;}
+body {
+    background: var(--bg-color);
+    font-size: 1.8rem;
+}
+/* 폰트 초기화 */
+body, textarea, button, input, select, th, td {
+    font-family: 'Noto Sans KR', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+    color: #282B26;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* 전체 레이아웃 */
+#header .row {
+    padding: 0px 60px;
+}
+.wrap {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+
+/************** 
+header
+***************/
+.header_fix {
+    width: 100%;
+    height: 110px;
+}
+#header {
+    width: 100%;
+    position: absolute;
+    height: 110px;
+    font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+#header.fixed {
+    background: var(--bg-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2 !important;
+    display: block;
+}
+#header .logo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #282B26;
+}
+#header .logo h1 a {
+    display: block;
+}
+#header .logo h1 img {
+    width: 100%;
+    width: 190px;
+    height: 19px;
+}
+.header {
+    border-bottom: 2px solid #282B26;
+    text-transform: uppercase;
+}
+.header ul {
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+.header ul li:first-child {
+    margin-right: 38px;
+    font-weight: 800;
+}
+.header ul li:last-child {
+    margin-left: auto;
+}
+.header ul li a {
+    display: block;
+    padding: 10px 0;
+}
+
+
+/************** 
+index
+***************/
+#index {
+    font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+    font-weight: 600;
+}
+#index .row {
+    padding: 0 60px;
+}
+.index {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 2px solid #282B26;
+    border-bottom: 2px solid #282B26;
+}
+.index em span {
+    font-weight: 400;
+}
+
+
+/************** 
+main
+***************/
+/* 레이아웃 */
+#main {
+    display: flex;
+    /* 헤더공간 빼기 */
+    height: calc(var(--vh, 1vh) * 100 - 110px);
+    font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+}
+#main .main_desk {
+    width: 45%;
+    height: 100%;
+    background: url('../image/main_pic.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#main .main_main {
+    width: 55%;
+    height: 100%;
+}
+#main .main_main .row {
+    padding-left: 30px;
+}
+
+/* main_main */
+.main_main .sec {
+    border-bottom: 2px solid #282B26;
+}
+.main_main .sec:last-child {border-bottom: 0;}
+/* sec1 */
+.main_main .sec1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 600;
+}
+/* sec2 */
+.main_main .sec2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.main_main .sec2 .por_menu ul li:before {
+    content: '#';
+}
+.main_main .sec2 .blog span {
+    display: inline-block;
+}
+.main_main .sec2 .blog span img {
+    width: 15px; 
+    height: 15px;
+}
+/* sec3 */
+.main_main .sec3 {
+    position: relative;
+    padding: 20px 0;
+}
+.main_main .sec3 .t1 img {
+    padding: 16px 0;
+}
+/* sec4 */
+.main_main .sec4 p {
+    font-family: 'Noto Sans KR', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+    text-align: right;
+    padding-top: 20px;
+}
+
+
+/************** 
+about_me
+***************/
+/* 레이아웃 */
+#about_me {
+    display: flex; 
+}
+#about_me .about_slide {
+    width: 40%;
+    height: 100%;
+}
+#about_me .about_desc {
+    width: 60%;
+    height: 100%;
+}
+/* about_slide */
+.about_slide {
+    border-right: 2px solid #282B26;
+}
+/* about_desc */
+.about_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about_desc .tit {
+    padding: 10px 32px;
+    border-bottom: 2px solid #282B26;
+    font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+    font-weight: 600;
+}
+.about_desc .skills .box {
+    padding: 1.5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.about_desc .skills dl {
+    display: flex;
+    align-items: center;
+    padding: 3% 0;
+}
+.about_desc .skills dd svg {
+    padding: 0px 30px;
+    width: 75px; height: 75px;
+}
+.about_desc .skills dt em {
+    font-weight: 700;
+    display: block;
+}
+.about_desc .profile .tit {
+    border-top: 2px solid #282B26;
+}
+.about_desc .profile .tab_menu {
+    overflow: hidden;
+    border-bottom: 2px solid #282B26;
+    font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+}
+.about_desc .profile .tab_menu li {
+    float: left;
+    text-align: center;
+    width: calc(100% / 3 - 2px);
+    border-right: 2px solid #282B26;
+}
+.about_desc .profile .tab_menu li:last-child {border: 0;}
+.about_desc .profile .tab_menu li a {
+    display: block;
+    padding: 10px 0;
+}
+.about_desc .profile .tab_menu li a:hover {
+    color: var(--bl-color);
+}
+.about_desc .profile .tab_menu li.active {
+    background: var(--sb-color2);
+}
+.about_desc .profile .tab_box {
+    min-height: 150px;
+    box-sizing: border-box;
+    padding: 3%;
+}
+.about_desc .profile .tab_box dl {
+    display: flex;
+}
+.about_desc .profile .tab_box dl dt {
+    color: var(--sb-color1);
+    font-weight: 500;
+    min-width: 60px;
+}
+
+
+/************** 
+portfolio_web
+***************/
+/* 레이아웃 */
+#portfolio_web.wrap {
+    height: auto;
+}
+.port_title {
+    padding: 30px 0;
+}
+.port_title h3 {
+    font-size: 8rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    color: var(--sb-color2);
+    line-height: 100%;
+}
+.port_title p {
+    font-size: 2.6rem;
+}
+/* port_slide */
+.port_slide .swiper-slide em {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+.port_slide .swiper-slide em:before {
+    content: '';
+    width: 20px; height: 20px;
+    background: var(--bl-color);
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 16px -2px 0;
+}
+.port_slide .swiper-slide h4 {
+    font-size: 3vw;
+    color: var(--sb-color2);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+}
+.port_slide .swiper-slide a.por_img {
+    display: block;
+    width: 100%; height: 218px;
+    margin-bottom: 24px;
+    background-size: cover;
+} 
+.port_slide .swiper-slide:nth-child(1) a.por_img {
+    background: url('../image/por1.png') no-repeat center center;
+    background-size: cover;
+}
+.port_slide .swiper-slide:nth-child(2) a.por_img {
+    background: url('../image/por2.png') no-repeat center center;
+    background-size: cover;
+}
+.port_slide .swiper-slide:nth-child(3) a.por_img {
+    background: url('../image/por3.png') no-repeat center center;
+    background-size: cover;
+}
+.port_slide .swiper-slide:nth-child(4) a.por_img {
+    background: url('../image/por4.png') no-repeat center center;
+    background-size: cover;
+}
+.port_slide .swiper-slide:nth-child(5) a.por_img {
+    background: url('../image/por5.png') no-repeat center center;
+    background-size: cover;
+}
+
+
+/************** 
+contact
+***************/
+/* 레이아웃 */
+#contact {
+    display: flex; 
+}
+.contact_form {
+    width: 60%;
+    height: 100%;
+}
+.contact_form .row {
+    padding: 50px 50px 0 0;
+}
+.contact_info {
+    width: 40%;
+    height: 100%;
+    background: var(--sb-color2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* contact_form */
+.contact_form h3 {
+    font-size: 8rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    color: var(--sb-color2);
+    line-height: 100%;
+}
+.contact_form p {
+    font-size: 2.6rem;
+    margin-bottom: 48px;
+}
+.contact_form p svg {
+    width: 30px; height: 30px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+.contact_form .myForm {
+    border: 2px solid #282B26;
+    padding: 20px;
+}
+.contact_form .myForm fieldset > div {
+    display: flex;
+    justify-content: space-between;
+}
+.contact_form .myForm input {
+    box-sizing: border-box;
+    padding: 6px;
+    background: none;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.contact_form .myForm input::placeholder {
+    color: var(--bl-color);
+}
+.contact_form .myForm .name, .contact_form .myForm .email {
+    width: calc(50% - 15px);
+}
+.contact_form .myForm .message {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.contact_form .myForm button {
+    padding: 10px 20px;
+    border: 2px solid #282B26;
+    font-size: 1.8rem;
+    background: var(--sb-color2);
+    float: right;
+}
+
+
+/* contact_info */
+.contact_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_info strong {
+    font-size: 4rem;
+    color: var(--bg-color);
+    line-height: 150%;
+    display: block;
+    margin-bottom: 32px;
+}
+.contact_info strong span {display: block;}
+.contact_info dt {
+    font-weight: 700; 
+    text-transform: uppercase;
+}
+.contact_info dl {
+    margin-bottom: 24px;
+}
+.contact_info dd svg {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+@media (max-width: 1440px) {
+    body {font-size: 1.6rem;}
+    /* header */
+    .header_fix {
+        height: 109px;
+    }
+    #header {
+        height: 109px;
+    }
+    .about_desc .skills dl {
+        padding: 2% 0;
+    }
+    /* portfolio_web */
+    .port_title h3 {font-size: 6rem;}
+    .port_title p {font-size: 2rem;}
+    /* contact */
+    .contact_form h3 {font-size: 6rem;}
+    .contact_form p {font-size: 2rem;}
+}
+@media (max-width: 1024px) {
+    .wrap {
+        padding: 0 30px;
+    }
+    /* header */
+    #header .row {
+        padding: 0px 30px;
+    }
+    /* index */
+    #index .row {
+        padding: 0 30px;
+    }
+    /* main */
+    #main .main_main .row {
+        padding-left: 30px;
+    }
+    /* contact */
+    #contact {
+        flex-direction: column;
+    }
+    .contact_form, .contact_info {
+        width: 100%;
+    }
+    .contact_form .row {
+        padding: 50px 0px 0 0;
+    }
+    .contact_info {
+        margin: 50px 0;
+    }
+    .contact_info {
+        padding: 50px 0; 
+    }
+    .contact_info strong span {display: inline;}
+}
+@media (max-width: 900px) {
+    /* about_me */
+    .wrap {
+        height: auto;
+    }
+    #about_me {
+        flex-direction: column;
+    }
+    #about_me .about_slide {
+        width: 100%;
+        /* 수정 시 swiper.css도 함께 수정 */
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        border-right: 0;
+    }
+    #about_me .about_desc {
+        width: 100%;
+        height: auto;
+    }
+    .about_desc .tit {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .about_desc .skills .tit {
+        border-top: 2px solid #282B26;
+    }
+    .about_desc .skills dd svg {
+        padding: 0 20px 0 0;
+    }
+    .about_desc .profile .tab_box {
+        padding: 30px 0;
+    }
+}
+@media (max-width: 768px) {
+    /* 전체 레이아웃 */
+    .wrap {
+        padding: 0 20px;
+    }
+    /* header */
+    #header .row {
+        padding: 0px 20px;
+    }
+    /* index */
+    #index .row {
+        padding: 0 20px;
+    }
+    /* main */
+    #main {
+        flex-direction: column;
+    }
+    #main .main_desk {
+        width: 100%;
+        height: 40%;
+        background-position: 80% 80%;
+    }
+    #main .main_main {
+        width: 100%;
+        height: 100%;
+    }
+    #main .main_main .row {
+        padding-left: 0;
+    }
+    /* portfolio_web */
+    .port_title h3 {
+        font-size: 4.8rem;
+    }
+    .port_title p {
+        font-size: 1.8rem;
+    }
+    /* contact */
+    .contact_form h3 {
+        font-size: 4.7rem;
+    }
+    .contact_form p {
+        font-size: 1.8rem; 
+        margin-bottom: 30px;
+    }
+    .contact_form .myForm fieldset > div {
+        flex-direction: column;
+    }
+    .contact_form .myForm .name, .contact_form .myForm .email {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact_form .myForm {
+        padding: 20px;
+    }
+    .contact_form .myForm input {
+        padding: 5px;
+    }
+    .contact_form .myForm .message {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .contact_form .myForm button {
+        padding: 5px 10px;
+    }
+    .contact_info strong {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 500px) {
+    body {font-size: 1.4rem;}
+    /* header */
+    .header ul {
+        justify-content: space-between;
+    }
+    .header ul li:first-child {
+        margin-right: 0;
+    }
+    .header ul li:last-child {
+        margin-left: 0;
+    }
+    /* contact */
+    .contact_form .myForm input {
+        font-size: 1.6rem;
+    }
+    .contact_form .myForm .name, .contact_form .myForm .email {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .contact_form .myForm {
+        padding: 10px;
+    }
+    .contact_form .myForm input {
+        padding: 5px;
+    }
+    .contact_form .myForm .message {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .contact_form .myForm button {
+        padding: 3px 6px;
+    }
+    .contact_form .myForm button {
+        font-size: 1.6rem;
+    }
+    .contact_info strong {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 376px) {
+    /* 전체 레이아웃 */
+    .wrap {
+        padding: 0 10px;
+    }
+    /* header */
+    #header .row {
+        padding: 0px 10px;
+    }
+    /* index */
+    #index .row {
+        padding: 0 10px;
+    }
+    /* main */
+    #main .main_main .row {
+        padding-left: 0;
+    }
+
+}
+
+
