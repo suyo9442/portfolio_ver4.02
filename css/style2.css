@@ -104,16 +104,17 @@ header
 /************** 
 index
 ***************/
-#index {
+.index {
     font-family: 'Archivo', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
     font-weight: 600;
 }
-#index .row {
+.index .row {
     padding: 0 60px;
 }
-.index {
+.index .inner {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 10px 0;
     border-top: 2px solid #282B26;
     border-bottom: 2px solid #282B26;
