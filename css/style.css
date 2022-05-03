@@ -10,6 +10,30 @@
     --vh: 100%;
 }
 
+
+/* 스크롤 디자인 */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border: 2px solid #282B26;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--bl-color);
+}
+.popup::-webkit-scrollbar {
+    width: 10px;
+}
+.popup::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-left: 2px solid #282B26;
+}
+.popup::-webkit-scrollbar-thumb {
+    background: var(--bl-color);
+}
+
+
 /* 스킵 메뉴 */
 #skip {position: relative;}
 #skip a {
