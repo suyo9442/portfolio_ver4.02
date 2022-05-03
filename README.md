@@ -24,3 +24,11 @@ class를 개별로 설정해줘야 함
 --> scrollTo, offsetTop, offsetHeight
 *중복되는 코드 합치는 방법은?
 
+3. 웹표준성 - 스킵메뉴 만들기
+--> rel: "bookmark"
+--> focus, active되었을 때 top값 변경
+
+4. contact 이메일, 전화번호 링크연결
+--> mailto, tell
+
+5. a태그 hover 수정

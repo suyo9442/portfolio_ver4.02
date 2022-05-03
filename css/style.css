@@ -111,6 +111,23 @@ header
 .header ul li a {
     display: block;
     padding: 10px 0;
+    position: relative;
+}
+.header ul li a:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--sb-color2);
+    z-index: -1;
+}
+.header ul li a:hover:after {
+    width: 100%;
+    transition: all .5s;
 }
 
 
@@ -182,6 +199,25 @@ main
 }
 .main_main .sec2 .por_menu ul li:before {
     content: '#';
+}
+.main_main .sec2 .blog a {
+    display: block;
+    position: relative;
+}
+.main_main .sec2 .blog a:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--bl-color);
+    transform: scale(0);
+    transition: all .5s;
+}
+.main_main .sec2 .blog a:hover:after {
+    transform: scale(1);
 }
 .main_main .sec2 .blog span {
     display: inline-block;
@@ -271,15 +307,15 @@ about_me
     border-right: 2px solid #282B26;
 }
 .about_desc .profile .tab_menu li:last-child {border: 0;}
+.about_desc .profile .tab_menu li.active {
+    background: var(--sb-color2);
+}
 .about_desc .profile .tab_menu li a {
     display: block;
     padding: 10px 0;
 }
 .about_desc .profile .tab_menu li a:hover {
-    color: var(--bl-color);
-}
-.about_desc .profile .tab_menu li.active {
-    background: var(--sb-color2);
+    background: #282b261b;
 }
 .about_desc .profile .tab_box {
     min-height: 150px;
@@ -330,7 +366,7 @@ portfolio_web
     margin: 0 16px -2px 0;
 }
 .port_slide .swiper-slide h4 {
-    font-size: 3vw;
+    font-size: 3rem;
     color: var(--sb-color2);
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
@@ -399,6 +435,7 @@ contact
     font-weight: 800;
     color: var(--sb-color2);
     line-height: 100%;
+    white-space: nowrap;
 }
 .contact_form p {
     font-size: 2.6rem;
@@ -442,7 +479,9 @@ contact
     background: var(--sb-color2);
     float: right;
 }
-
+.contact_form .myForm button:hover {
+    background: #e36619;
+}
 
 /* contact_info */
 .contact_info {
@@ -470,29 +509,41 @@ contact
     height: 30px;
     padding: 10px;
 }
+.contact_info dd a {
+    position: relative;
+}
+.contact_info dd a:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--bl-color);
+    transform: scale(0);
+    transition: all .5s;
+}
+.contact_info dd a:hover:after {
+    transform: scale(1);
+}
 
 
 
 
 
-@media (max-width: 1440px) {
-    body {font-size: 1.6rem;}
+@media (max-width: 1280px) {
+    html {font-size: 56%;}
     /* header */
     .header_fix {
-        height: 109px;
+        height: 105px;
     }
     #header {
-        height: 109px;
+        height: 105px;
     }
     .about_desc .skills dl {
         padding: 2% 0;
     }
-    /* portfolio_web */
-    .port_title h3 {font-size: 6rem;}
-    .port_title p {font-size: 2rem;}
-    /* contact */
-    .contact_form h3 {font-size: 6rem;}
-    .contact_form p {font-size: 2rem;}
 }
 @media (max-width: 1024px) {
     .wrap {
@@ -591,20 +642,11 @@ contact
         padding-left: 0;
     }
     /* portfolio_web */
-    .port_title h3 {
-        font-size: 4.8rem;
-    }
-    .port_title p {
-        font-size: 1.8rem;
-    }
+    .port_title h3 {font-size: 6rem;}
+    .port_title p {font-size: 2rem;}
     /* contact */
-    .contact_form h3 {
-        font-size: 4.7rem;
-    }
-    .contact_form p {
-        font-size: 1.8rem; 
-        margin-bottom: 30px;
-    }
+    .contact_form h3 {font-size: 6rem;}
+    .contact_form p {font-size: 2rem;}
     .contact_form .myForm fieldset > div {
         flex-direction: column;
     }
@@ -630,8 +672,14 @@ contact
     }
 }
 @media (max-width: 500px) {
-    body {font-size: 1.4rem;}
+    html {font-size: 50%;}
     /* header */
+    .header_fix {
+        height: 104px;
+    }
+    #header {
+        height: 104px;
+    }
     .header ul {
         justify-content: space-between;
     }
@@ -686,7 +734,21 @@ contact
     #main .main_main .row {
         padding-left: 0;
     }
-
+        /* portfolio_web */
+        .port_title h3 {
+            font-size: 4.8rem;
+        }
+        .port_title p {
+            font-size: 2rem;
+        }
+        /* contact */
+        .contact_form h3 {
+            font-size: 4.7rem;
+        }
+        .contact_form p {
+            font-size: 2rem; 
+            margin-bottom: 30px;
+        }
 }
 
 

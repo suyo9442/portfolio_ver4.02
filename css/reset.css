@@ -82,10 +82,8 @@ input:checked[type=checkbox] {
 
 /* hover */
 a {transition: all .2s;}
-a:hover {
-    color: var(--sb-color2);
-}
-
+a:hover {color: unset;}
+button:hover {background: #cd5d18;}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-device-pixel-ratio: 1.5),
