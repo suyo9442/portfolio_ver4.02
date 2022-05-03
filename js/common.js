@@ -73,6 +73,7 @@ $('.myForm button[type=submit]').on('click', function(e){
 })
 
 
+// popup
 var popBtn = $('.por_list li');
 var popCont = $('.overay');
 var popClose = $('.close');
@@ -85,7 +86,6 @@ popBtn.click(function(e){
     popCont.eq(index2).addClass('popup_show');
     $('body').css('overflow', 'hidden');
 })
-
 popClose.click(function(e){
     e.preventDefault();
     
