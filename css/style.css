@@ -487,7 +487,8 @@ portfolio_design
     background: #000a;
     z-index: 2;
     visibility: hidden;
-    /* opacity: 0; */
+    opacity: 0;
+    transition: all .5s;
 }
 .popup {
     width: 60%;
@@ -502,7 +503,7 @@ portfolio_design
 }
 .popup_show {
     visibility: visible;
-    /* opacity: 1; */
+    opacity: 1;
 }
 .pop_tit {
     width: 100%;
