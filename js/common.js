@@ -16,6 +16,41 @@ $(window).on('scroll', function(){
 });
 
 
+//gnb 해당영역 이동
+const gnb = document.querySelectorAll('.header ul li a');
+const index = document.querySelectorAll('.index');
+const headerHeight = document.querySelector('#header').offsetHeight - 1;
+
+gnb[0].addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top: index[1].offsetTop - headerHeight, behavior:'smooth'});
+})
+gnb[1].addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top: index[0].offsetTop - headerHeight, behavior:'smooth'});
+})
+gnb[2].addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top: index[2].offsetTop - headerHeight, behavior:'smooth'});
+})
+
+
+// const headerHeight2 = document.querySelector('#header').offsetHeight;
+// document.querySelectorAll('.header a[href^="#"]').forEach(elem => {
+//     elem.addEventListener('click', e => {
+//         e.preventDefault();
+//         document.querySelector(elem.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth',
+//             offsetTop: 20
+//         });
+//     });
+// });
+
+
+
+
+
+
 // about_desc 탭메뉴
 var tabBtn = $('.profile .tab_menu li')
 var tabCont = $('.profile .tab_box > div')
