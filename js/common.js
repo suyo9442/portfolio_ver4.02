@@ -19,7 +19,7 @@ $(window).on('scroll', function(){
 //gnb 해당영역 이동
 const gnb = document.querySelectorAll('.header ul li a');
 const index = document.querySelectorAll('.index');
-const headerHeight = document.querySelector('#header').offsetHeight - 1;
+const headerHeight = document.querySelector('#header').offsetHeight;
 
 gnb[0].addEventListener('click', function(e){
     e.preventDefault();
@@ -33,22 +33,6 @@ gnb[2].addEventListener('click', function(e){
     e.preventDefault();
     window.scrollTo({top: index[2].offsetTop - headerHeight, behavior:'smooth'});
 })
-
-
-// const headerHeight2 = document.querySelector('#header').offsetHeight;
-// document.querySelectorAll('.header a[href^="#"]').forEach(elem => {
-//     elem.addEventListener('click', e => {
-//         e.preventDefault();
-//         document.querySelector(elem.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth',
-//             offsetTop: 20
-//         });
-//     });
-// });
-
-
-
-
 
 
 // about_desc 탭메뉴
@@ -86,4 +70,25 @@ $('.myForm button[type=submit]').on('click', function(e){
         // console.log('FAILED...', error);
         alert('메일 전송이 실패했습니다.')
     });
+})
+
+
+var popBtn = $('.por_list li a');
+var popCont = $('.overay');
+var popClose = $('.close');
+
+popBtn.click(function(e){
+    e.preventDefault();
+    var target2 = $(this);
+
+    var index2 = target2.index();
+    popCont.eq(index2).addClass('popup_show');
+    $('body').css('overflow', 'hidden');
+})
+
+popClose.click(function(e){
+    e.preventDefault();
+    
+    popCont.removeClass('popup_show');
+    $('body').css('overflow', 'auto');
 })

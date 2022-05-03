@@ -374,9 +374,11 @@ portfolio_web
 }
 .port_slide .swiper-slide a.por_img {
     display: block;
-    width: 100%; height: 218px;
-    margin-bottom: 24px;
+    width: 100%; 
+    min-height: 218px;
+    margin-bottom: 16px;
     background-size: cover;
+    border: 2px solid #282B26;
 } 
 .port_slide .swiper-slide:nth-child(1) a.por_img {
     background: url('../image/por1.png') no-repeat center center;
@@ -401,6 +403,127 @@ portfolio_web
 .port_slide .swiper-slide:nth-child(6) a.por_img {
     background: url('../image/por6.png') no-repeat center center;
     background-size: cover;
+}
+
+
+/************** 
+portfolio_design
+***************/
+/* 레이아웃 */
+#portfolio_design.wrap {
+    height: auto;
+}
+.port_box ul li {
+    border-top: 2px solid #282B26;
+    padding: 30px 0;
+    display: flex;
+}
+.port_box ul li a {
+    display: block;
+    background: #000;
+    border: 2px solid #282B26;
+    width: 40vw;
+    height: 30vw;
+    margin-right: 30px;
+}
+.port_box ul li:nth-child(1) a {
+    background: url('../image/design01_thum.png') no-repeat center center;
+    background-size: cover;
+}
+.port_box ul li:nth-child(2) a {
+    background: url('../image/design02_thum.png') no-repeat center center;
+    background-size: cover;
+}
+.port_box ul li:nth-child(3) a {
+    background: url('../image/design03_thum.png') no-repeat center center;
+    background-size: cover;
+}
+.port_box .por_list li em {
+    font-size: 3rem;
+    color: var(--sb-color2);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.port_box .por_list li .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.port_box .por_list li .desc span {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.port_box .por_list li .desc span > div:nth-child(1) {
+    width: 50%;
+    margin-bottom: auto;
+}
+.port_box .por_list li .desc span > div:nth-child(2){
+    width: 50%;
+    /* padding-left: 20px; */
+    /* margin-top: auto; */
+}
+.port_box .por_list li .desc span dl {
+    display: flex;
+    flex-direction: column;
+}
+.port_box .por_list li .desc span dl:nth-child(1) {
+    margin-bottom: 16px;
+}
+.port_box .por_list li .desc span dt {
+    color: var(--sb-color2);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* popup */
+.overay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000a;
+    z-index: 2;
+    visibility: hidden;
+    /* opacity: 0; */
+}
+.popup {
+    width: 60%;
+    height: 90%;
+    background: var(--bg-color);
+    border: 2px solid #282B26;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+.popup_show {
+    visibility: visible;
+    /* opacity: 1; */
+}
+.pop_tit {
+    width: 100%;
+    padding: 20px 30px;
+    background: var(--sb-color2);
+    border-bottom: 2px solid #282B26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pop_tit h4 {
+    font-size: 3rem;
+}
+.pop_tit button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #282B26;
+    background: var(--bg-color);
+}
+.pop_box {
+    padding: 30px;
 }
 
 
@@ -644,6 +767,44 @@ contact
     /* portfolio_web */
     .port_title h3 {font-size: 6rem;}
     .port_title p {font-size: 2rem;}
+    /* portfolio_design */
+    .port_box .por_list li .desc span {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .port_box .por_list li .desc span > div:nth-child(1) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .port_box .por_list li .desc span > div:nth-child(2){
+        width: 100%;
+    }
+    .port_box .por_list li .desc span dl {
+        flex-direction: row;
+    }
+    .port_box .por_list li .desc span dl:nth-child(1) {
+        margin-bottom: 10px;
+    }
+    /* popup */
+    .popup {
+        width: 90%;
+        height: 90%;
+    }
+    .pop_tit {
+        padding: 10px;
+    }
+    .pop_tit h4 {
+        font-size: 2rem;
+    }
+    .pop_tit button {
+        width: 30px;
+        height: 30px;
+    }
+    .pop_box {
+        padding: 10px;
+    }
+
+
     /* contact */
     .contact_form h3 {font-size: 6rem;}
     .contact_form p {font-size: 2rem;}
