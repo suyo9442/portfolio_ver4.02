@@ -1,10 +1,5 @@
 @charset "utf-8";
 :root {
-    /* Breakpoint */
-    --laptop: 1024px;
-    --tablet: 768px;
-    --phone: 375px;
-
     /* color */
     --bg-color: #EBEAE6;
     --bl-color: #282B26;
@@ -14,6 +9,24 @@
     /* 모바일 100vh 리사이징 */
     --vh: 100%;
 }
+
+/* 스킵 메뉴 */
+#skip {position: relative;}
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 140px;
+    border: 1px solid #282B26;
+    background: var(--sb-color2); 
+    color: #fff; 
+    text-align: center;
+    line-height: 30px;
+    z-index: 1;
+}
+#skip a:active,
+#skip a:focus {top: 0;}
+
 
 /* 루트 폰트 사이즈 */
 html {font-size: 62.5%;}
