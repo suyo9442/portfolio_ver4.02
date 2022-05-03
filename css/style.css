@@ -236,7 +236,6 @@ main
 }
 /* sec4 */
 .main_main .sec4 p {
-    font-family: 'Noto Sans KR', Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
     text-align: right;
     padding-top: 20px;
 }
@@ -375,7 +374,7 @@ portfolio_web
 .port_slide .swiper-slide a.por_img {
     display: block;
     width: 100%; 
-    min-height: 218px;
+    height: 218px;
     margin-bottom: 16px;
     background-size: cover;
     border: 2px solid #282B26;
@@ -766,8 +765,12 @@ contact
         padding-left: 0;
     }
     /* portfolio_web */
-    .port_title h3 {font-size: 6rem;}
-    .port_title p {font-size: 2rem;}
+    .port_title h3 {
+        font-size: 6rem;
+    }
+    .port_title p {
+        font-size: 2rem;
+    }
     /* portfolio_design */
     .port_box .por_list li .desc span {
         flex-direction: column;
@@ -804,11 +807,13 @@ contact
     .pop_box {
         padding: 10px;
     }
-
-
     /* contact */
-    .contact_form h3 {font-size: 6rem;}
-    .contact_form p {font-size: 2rem;}
+    .contact_form h3 {
+        font-size: 6rem;
+    }
+    .contact_form p {
+        font-size: 2rem;
+    }
     .contact_form .myForm fieldset > div {
         flex-direction: column;
     }
@@ -850,6 +855,10 @@ contact
     }
     .header ul li:last-child {
         margin-left: 0;
+    }
+    /* portfolio_web */
+    .port_slide .swiper-slide a.por_img {
+        height: 180px;
     }
     /* contact */
     .contact_form .myForm input {
