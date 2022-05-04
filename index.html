@@ -640,12 +640,15 @@
                 <div class="row">
                     <ul class="por_list">
                         <li>
-                            <div>
+                            <div class="img">
                                 <a href="#">
                                 </a>
                             </div>
                             <div class="desc">
-                                <em>UXUI Senario : 해마노트</em>
+                                <em>
+                                    UXUI Senario : 
+                                    <span>해마노트</span>
+                                </em>
                                 <span>
                                     <div>
                                         <dl>
@@ -666,12 +669,15 @@
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div class="img">
                                 <a href="#">
                                 </a>
                             </div>
                             <div class="desc">
-                                <em>UXUI Design : 해마노트</em>
+                                <em>
+                                    UXUI Design : 
+                                    <span>해마노트</span>
+                                </em>
                                 <span>
                                     <div>
                                         <dl>
@@ -692,12 +698,15 @@
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div class="img">
                                 <a href="#">
                                 </a>
                             </div>
                             <div class="desc">
-                                <em>WEB Design : 포트폴리오 사이트</em>
+                                <em>
+                                    WEB Design : 
+                                    <span>포트폴리오 사이트</span>
+                                </em>
                                 <span>
                                     <div>
                                         <dl>
@@ -763,7 +772,7 @@
             <div class="popup">
                 <div class="row">
                     <div class="pop_tit">
-                        <h4>UXUI Senario : 해마노트</h4>
+                        <h4>UXUI Design : 해마노트</h4>
                         <button type="button" class="close">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -795,9 +804,7 @@
             <div class="popup">
                 <div class="row">
                     <div class="pop_tit">
-                        <h4>UXUI Senario : 
-                            <span>해마노트</span>
-                        </h4>
+                        <h4>WEB Design : 포트폴리오 사이트</h4>
                         <button type="button" class="close">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -985,7 +992,7 @@
 
             /* portfolio_web swiper */
             var swiper2 = new Swiper(".mySwiper2", {
-                slidesPerView: 1.5,
+                slidesPerView: 1.2,
                 spaceBetween: -2,
                 // slidesOffsetAfter: 378,
                 scrollbar: {
@@ -994,7 +1001,8 @@
                     dragSize: 100
                 },
                 breakpoints: {
-                    768: {
+                    500: {
+                        slidesPerView: 2,
                         scrollbar: {
                             dragSize: 200
                         }

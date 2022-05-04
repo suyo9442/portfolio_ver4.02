@@ -74,7 +74,7 @@ $('.myForm button[type=submit]').on('click', function(e){
 
 
 // popup
-var popBtn = $('.por_list li');
+var popBtn = $('.por_list li .img a');
 var popCont = $('.overay');
 var popClose = $('.close');
 

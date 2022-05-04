@@ -441,7 +441,17 @@ portfolio_design
     padding: 30px 0;
     display: flex;
 }
-.port_box ul li a {
+.port_box .por_list li .img {
+    width: 50%;
+}
+.port_box .por_list li .desc {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* img */
+.por_list li .img a {
     display: block;
     background: #000;
     border: 2px solid #282B26;
@@ -449,52 +459,46 @@ portfolio_design
     height: 30vw;
     margin-right: 30px;
 }
-.port_box ul li:nth-child(1) a {
+.por_list li:nth-child(1) a {
     background: url('../image/design01_thum.png') no-repeat center center;
     background-size: cover;
 }
-.port_box ul li:nth-child(2) a {
+.por_list li:nth-child(2) a {
     background: url('../image/design02_thum.png') no-repeat center center;
     background-size: cover;
 }
-.port_box ul li:nth-child(3) a {
+.por_list li:nth-child(3) a {
     background: url('../image/design03_thum.png') no-repeat center center;
     background-size: cover;
 }
-.port_box .por_list li em {
+/* desc */
+.por_list li .desc em {
     font-size: 3rem;
     color: var(--sb-color2);
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
     margin-bottom: 6px;
 }
-.port_box .por_list li .desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.port_box .por_list li .desc span {
+.por_list li .desc > span {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.port_box .por_list li .desc span > div:nth-child(1) {
+.por_list li .desc span > div:nth-child(1) {
     width: 50%;
     margin-bottom: auto;
 }
-.port_box .por_list li .desc span > div:nth-child(2){
+.por_list li .desc span > div:nth-child(2){
     width: 50%;
-    /* padding-left: 20px; */
-    /* margin-top: auto; */
 }
-.port_box .por_list li .desc span dl {
+.por_list li .desc span dl {
     display: flex;
     flex-direction: column;
 }
-.port_box .por_list li .desc span dl:nth-child(1) {
+.por_list li .desc span dl:nth-child(1) {
     margin-bottom: 16px;
 }
-.port_box .por_list li .desc span dt {
+.por_list li .desc span dt {
     color: var(--sb-color2);
     font-weight: 600;
     margin-right: 10px;
@@ -727,10 +731,28 @@ contact
     .contact_info strong span {display: inline;}
 }
 @media (max-width: 900px) {
-    /* about_me */
     .wrap {
         height: auto;
     }
+    /* portfolio_design */
+    .por_list li .desc span {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .por_list li .desc span > div:nth-child(1) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .por_list li .desc span > div:nth-child(2){
+        width: 100%;
+    }
+    .por_list li .desc span dl {
+        flex-direction: row;
+    }
+    .por_list li .desc span dl:nth-child(1) {
+        margin-bottom: 10px;
+    }
+    /* about_me */
     #about_me {
         flex-direction: column;
     }
@@ -757,6 +779,10 @@ contact
     }
     .about_desc .profile .tab_box {
         padding: 30px 0;
+    }
+    /* portfolio_design */
+    .por_list li .desc em span {
+        display: block;
     }
 }
 @media (max-width: 768px) {
@@ -794,24 +820,6 @@ contact
     }
     .port_title p {
         font-size: 2rem;
-    }
-    /* portfolio_design */
-    .port_box .por_list li .desc span {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .port_box .por_list li .desc span > div:nth-child(1) {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .port_box .por_list li .desc span > div:nth-child(2){
-        width: 100%;
-    }
-    .port_box .por_list li .desc span dl {
-        flex-direction: row;
-    }
-    .port_box .por_list li .desc span dl:nth-child(1) {
-        margin-bottom: 10px;
     }
     /* popup */
     .popup {
@@ -884,6 +892,28 @@ contact
     .port_slide .swiper-slide a.por_img {
         height: 180px;
     }
+    /* portfolio_design */
+    .port_box ul li {
+        flex-direction: column;
+    }
+    .port_box .por_list li .img {
+        width: 100%;
+    }
+    .port_box .por_list li .desc {
+        width: 100%;
+    }
+    .por_list li .img a {
+        width: 100%;
+        height: 218px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    .por_list li .desc em {
+        font-size: 2.4rem;
+    }
+    .por_list li .desc em span {
+        display: inline;
+    }
     /* contact */
     .contact_form .myForm input {
         font-size: 1.6rem;
@@ -922,28 +952,28 @@ contact
         padding: 0px 10px;
     }
     /* index */
-    #index .row {
+    .index .row {
         padding: 0 10px;
     }
     /* main */
     #main .main_main .row {
         padding-left: 0;
     }
-        /* portfolio_web */
-        .port_title h3 {
-            font-size: 4.8rem;
-        }
-        .port_title p {
-            font-size: 2rem;
-        }
-        /* contact */
-        .contact_form h3 {
-            font-size: 4.7rem;
-        }
-        .contact_form p {
-            font-size: 2rem; 
-            margin-bottom: 30px;
-        }
+    /* portfolio_web */
+    .port_title h3 {
+        font-size: 4.8rem;
+    }
+    .port_title p {
+        font-size: 2rem;
+    }
+    /* contact */
+    .contact_form h3 {
+        font-size: 4.7rem;
+    }
+    .contact_form p {
+        font-size: 2rem; 
+        margin-bottom: 30px;
+    }
 }
 
 
