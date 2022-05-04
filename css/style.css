@@ -261,7 +261,7 @@ main
 /* sec4 */
 .main_main .sec4 p {
     text-align: right;
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 
@@ -813,6 +813,9 @@ contact
     }
     #main .main_main .row {
         padding-left: 0;
+    }
+    .main_main .sec3 {
+        padding: 10px 0;
     }
     /* portfolio_web */
     .port_title h3 {
