@@ -78,15 +78,15 @@ var popBtn = $('.por_list li');
 var popCont = $('.overay');
 var popClose = $('.close');
 
-popBtn.click(function(e){
+popBtn.on('click', function(e){
     e.preventDefault();
     var target2 = $(this);
-
+    
     var index2 = target2.index();
     popCont.eq(index2).addClass('popup_show');
     $('body').css('overflow', 'hidden');
 })
-popClose.click(function(e){
+popClose.on('click', function(e){
     e.preventDefault();
     
     popCont.removeClass('popup_show');
