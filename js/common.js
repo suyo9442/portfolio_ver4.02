@@ -78,6 +78,7 @@ let popBtn = $('.por_list li a');
 let popCont = $('.overay');
 let popClose = $('.close');
 let popIndex = $('.por_list li').length;
+let bgBlack = $('.bg_black');
 
 
 for(let i = 0; i < popIndex; i++) {
@@ -92,5 +93,11 @@ for(let i = 0; i < popIndex; i++) {
 popClose.on('click', function(){
     popCont.removeClass('popup_show');
     $('body').css('overflow', 'auto');
+})
+bgBlack.on('click', function(e){
+        if(e.target == e.currentTarget) {
+            popCont.removeClass('popup_show');
+            $('body').css('overflow', 'auto');  
+        }
 })
 
