@@ -94,10 +94,10 @@ popClose.on('click', function(){
     popCont.removeClass('popup_show');
     $('body').css('overflow', 'auto');
 })
-bgBlack.on('click', function(e){
-        if(e.target == e.currentTarget) {
-            popCont.removeClass('popup_show');
-            $('body').css('overflow', 'auto');  
-        }
+popCont.on('click', function(e){
+    if(e.target == e.currentTarget){
+        popCont.removeClass('popup_show');
+        $('body').css('overflow', 'auto');
+    }
 })
 
