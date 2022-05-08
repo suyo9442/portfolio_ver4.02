@@ -74,21 +74,23 @@ $('.myForm button[type=submit]').on('click', function(e){
 
 
 // popup
-var popBtn = $('.por_list li');
-var popCont = $('.overay');
-var popClose = $('.close');
+let popBtn = $('.por_list li a');
+let popCont = $('.overay');
+let popClose = $('.close');
+let popIndex = $('.por_list li').length;
 
-popBtn.on('click', function(e){
-    e.preventDefault();
-    var target2 = $(this);
-    
-    var index2 = target2.index();
-    popCont.eq(index2).addClass('popup_show');
-    $('body').css('overflow', 'hidden');
-})
-popClose.on('click', function(e){
-    e.preventDefault();
-    
+
+for(let i = 0; i < popIndex; i++) {
+    popBtn.eq(i).on('click', function(e){
+        e.preventDefault();
+        
+        popCont.removeClass('popup_show');
+        popCont.eq(i).addClass('popup_show');
+        $('body').css('overflow', 'hidden');
+    })
+}
+popClose.on('click', function(){
     popCont.removeClass('popup_show');
     $('body').css('overflow', 'auto');
 })
+
