@@ -80,7 +80,6 @@ let popClose = $('.close');
 let popIndex = $('.por_list li').length;
 let bgBlack = $('.bg_black');
 
-
 for(let i = 0; i < popIndex; i++) {
     popBtn.eq(i).on('click', function(e){
         e.preventDefault();
@@ -95,7 +94,7 @@ popClose.on('click', function(){
     $('body').css('overflow', 'auto');
 })
 popCont.on('click', function(e){
-    if(e.target == e.currentTarget){
+    if($(e.target) == popCont){
         popCont.removeClass('popup_show');
         $('body').css('overflow', 'auto');
     }
