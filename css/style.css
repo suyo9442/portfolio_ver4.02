@@ -600,6 +600,7 @@ contact
 .contact_form .myForm {
     border: 2px solid #282B26;
     padding: 20px;
+    overflow: hidden;
 }
 .contact_form .myForm fieldset > div {
     display: flex;
